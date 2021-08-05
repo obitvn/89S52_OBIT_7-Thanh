@@ -1,0 +1,47 @@
+C51 COMPILER V9.57.0.0   LED_7_THANH                                                       01/22/2019 14:09:25 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE LED_7_THANH
+OBJECT MODULE PLACED IN LED 7 Thanh.OBJ
+COMPILER INVOKED BY: F:\Cai_Phan_Mem\Keil C 8051\C51\BIN\C51.EXE LED 7 Thanh.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTE
+                    -ND TABS(2)
+
+line level    source
+
+   1          // Chao mung ban den voi www.mualinhkien.vn
+   2          // Huong dan su dung kit 8051
+   3          // Huong dan Lap trinh LED 7 Thanh
+   4          
+   5          
+   6          #include <REGX51.H>
+   7          
+   8          unsigned char maLED[10] = {0x03,0x9F,0x25,0x0D,0x99,0x49,0x41,0x1F,0X01,0x09};
+   9          int i;
+  10          
+  11          void delay(int time){
+  12   1        while(time--);
+  13   1      }
+  14          
+  15          void main(){
+  16   1        P0 = 0;
+  17   1        while(1){
+  18   2            for(i = 0; i < 10; i++){
+  19   3            P1 = maLED[i];
+  20   3            delay(60000);
+  21   3            }
+  22   2          }
+  23   1        }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     55    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
